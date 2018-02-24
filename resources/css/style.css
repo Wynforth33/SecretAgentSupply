@@ -23,6 +23,10 @@ h3 {
   margin: 1.25rem 0;
 }
 
+img {
+  height: auto;
+}
+
 /* Header */
 .header {
   display: flex;
@@ -54,10 +58,13 @@ h3 {
 }
 
 .featured {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100%;
   max-width: 960px;
   margin: 0 auto;
 }
-
 
 .featured div {
   display: flex;
@@ -66,9 +73,9 @@ h3 {
   justify-content: center;
   background-color: black;
   font-weight: bold;
-  width: 20rem;
   position: relative;
-  top: 9rem;
+  margin: auto 0 auto;
+  width: 20rem;
   padding: 2rem 3rem;
 }
 
@@ -76,3 +83,94 @@ h3 {
   margin: 0.25rem 0;
   line-height: 1.2em;
 }
+
+/* Navigation */
+nav {
+  display: flex;
+  background-color: red;
+}
+
+ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 3em;
+  width: 960px;
+  margin: 0 auto;
+}
+
+li {
+  display: inline-block;
+  color: white;
+}
+
+/* Store */
+/* Products */
+.products {
+  display: flex;
+  justify-content: space-between;
+  max-width: 960px;
+  margin: 3em auto;
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: black;
+  width: 30%;
+}
+
+.description {
+  margin: 0.75em auto;
+}
+
+.image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  width: 98%;
+  height: 85%;
+}
+
+.pen {
+  width: 8em;
+  margin: 3em auto;
+}
+
+.watch {
+  width: 9em;
+  margin: 2.5 auto;
+}
+
+.glasses {
+  width: 11.5em;
+  margin: 2.5 auto;
+}
+
+/* contact */
+.contact {
+  display: flex;
+  justify-content: space-between;
+  max-width: 960px;
+  margin: 0 auto 3em auto;
+}
+
+.info {
+  background-color: black;
+  width: 34.3%
+}
+
+.info h3 {
+  padding-left: 1em;
+}
+
+.info span {
+  display: block;
+  background-color: white;
+  height: 50%;
+  padding: 1em 0;
+}
+
+/* Footer */
