@@ -9,10 +9,6 @@ body {
   line-height: 1.33em;
 }
 
-div {
-  border: 1px solid black;
-}
-
 h1 {
   font-size: 2rem;
 }
@@ -27,9 +23,17 @@ img {
   height: auto;
 }
 
-/* Header */
-.header {
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.flex {
   display: flex;
+}
+
+/* Header */
+header {
   align-items: center;
   background-color: black;
   height: 3rem;
@@ -37,7 +41,6 @@ img {
 }
 
 .logo {
-  display: flex;
   align-items: center;
   margin-left: 20%;
 }
@@ -58,23 +61,18 @@ img {
 }
 
 .featured {
-  display: flex;
   justify-content: flex-start;
   align-items: center;
   height: 100%;
-  max-width: 960px;
-  margin: 0 auto;
 }
 
 .featured div {
-  display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
   background-color: black;
   font-weight: bold;
   position: relative;
-  margin: auto 0 auto;
   width: 20rem;
   padding: 2rem 3rem;
 }
@@ -86,20 +84,17 @@ img {
 
 /* Navigation */
 nav {
-  display: flex;
   background-color: red;
 }
 
-ul {
-  display: flex;
+nav div {
   align-items: center;
   justify-content: space-between;
+  width: 100%;
   height: 3em;
-  width: 960px;
-  margin: 0 auto;
 }
 
-li {
+.nav span {
   display: inline-block;
   color: white;
 }
@@ -107,9 +102,7 @@ li {
 /* Store */
 /* Products */
 .products {
-  display: flex;
   justify-content: space-between;
-  max-width: 960px;
   margin: 3em auto;
 }
 
@@ -132,6 +125,7 @@ li {
   background-color: white;
   width: 98%;
   height: 85%;
+  margin: 3px;
 }
 
 .pen {
@@ -151,9 +145,7 @@ li {
 
 /* contact */
 .contact {
-  display: flex;
   justify-content: space-between;
-  max-width: 960px;
   margin: 0 auto 3em auto;
 }
 
@@ -174,3 +166,12 @@ li {
 }
 
 /* Footer */
+footer {
+  background-color: black;
+  height: 10em;
+}
+
+.footer {
+  align-items: center;
+  height: 100%;
+}
