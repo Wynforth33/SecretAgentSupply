@@ -1,30 +1,20 @@
 /* Universal Styles */
 html {
   font-size: 18px;
-  background-color: white;
+  font-family: "Helvetica", sans-serif;
+  color: white;
 }
 
-body {
-  font-family: "Helvetica", sans-serif;
-  line-height: 1.33em;
+h3 {
+  font-size: 1rem;
 }
 
 h1 {
   font-size: 2rem;
 }
 
-h1,
-h3 {
-  color: white;
-  margin: 1.25rem 0;
-}
-
-img {
-  height: auto;
-}
-
 .container {
-  width: 960px;
+  max-width: 960px;
   margin: 0 auto;
 }
 
@@ -34,145 +24,196 @@ img {
 
 /* Header */
 header {
-  align-items: center;
   background-color: black;
-  height: 3rem;
-  width: 100%;
 }
 
 .logo {
+  justify-content: flex-start;
   align-items: center;
 }
 
 .logo img {
   height: 1.5rem;
   width: auto;
-  margin-right: 1rem;
+  margin-left: 0.5rem;
+}
+
+.logo h3 {
+  margin: 0.66rem 1rem;
 }
 
 /* Jumbotron */
 .jumbotron {
   background-image: url("https://s3.amazonaws.com/codecademy-content/courses/freelance-1/unit-5/moto.jpeg");
-  background-repeat: no-repeat;
   background-position: center;
+  background-repeat: no-repeat;
   background-size: cover;
   height: 25rem;
-  padding-bottom: 3em;
 }
 
 .featured {
-  justify-content: flex-start;
-  align-items: flex-end;
-  height: 100%;
-  margin-bottom: 3em;
-}
-
-.featured div {
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
+  justify-content: space-between;
   background-color: black;
-  font-weight: bold;
   position: relative;
-  width: 20rem;
+  top: 9rem;
+  font-weight: bold;
+  text-align: left;
   padding: 2rem 3rem;
-}
-
-.featured h1 {
-  margin: 0.25rem 0;
-  line-height: 1.2em;
+  width: 20rem;
+  line-height: 225%;
 }
 
 /* Navigation */
 nav {
-  background-color: red;
+  background-color: Firebrick;
 }
 
-nav div {
-  align-items: center;
+.nav {
   justify-content: space-between;
-  width: 100%;
-  height: 3em;
+  align-items: center;
+  padding: 0.75rem 0;
 }
 
-.nav span {
-  display: inline-block;
-  color: white;
+#menu {
+  display: none;
 }
 
 /* Store */
 /* Products */
 .products {
   justify-content: space-between;
-  margin: 3em auto;
+  padding: 3rem 0;
 }
 
 .product {
-  display: flex;
   flex-direction: column;
-  align-items: center;
-  background-color: black;
+  border: 4px solid black;
   width: 30%;
 }
 
-.description {
-  margin: 0.75em auto;
-}
-
 .image {
-  display: flex;
   justify-content: center;
-  align-items: center;
+  padding: 2rem 0;
   background-color: white;
-  width: 98%;
-  height: 85%;
-  margin: 3px;
 }
 
-.pen {
-  width: 8em;
-  margin: 3em auto;
-}
-
+.pen,
 .watch {
-  width: 9em;
-  margin: 2.5 auto;
+  height: 9rem;
+  width: auto;
 }
 
 .glasses {
-  width: 11.5em;
-  margin: 2.5 auto;
+  width: auto;
+  height: 5rem;
+  padding: 2rem 0;
 }
 
-/* contact */
+.product h3 {
+  background-color: black;
+  text-align: center;
+  padding: 0.5rem 0;
+}
+
+/* Contact */
 .contact {
   justify-content: space-between;
-  margin: 0 auto 3em auto;
+  padding-bottom: 4rem;
 }
 
 .info {
-  background-color: black;
-  width: 34.3%
+  width: 35%;
 }
 
 .info h3 {
-  padding-left: 1em;
+  background-color: black;
+  padding: 1rem 2rem;
 }
 
 .info span {
-  display: block;
-  background-color: white;
-  height: 50%;
-  padding: 1em 0;
+  color: black;
+  line-height: 1.5rem;
 }
 
 /* Footer */
 footer {
   background-color: black;
-  height: 10em;
 }
 
 .footer {
   align-items: center;
-  height: 100%;
+  height: 11rem;
+}
+
+/* Screens Smaller than width: 1024px */
+@media only screen and (max-width: 1024px) {
+  #watch {
+    display: none;
+  }
+
+  .product {
+    width: 47%;
+  }
+
+  .nav {
+    justify-content: center;
+  }
+
+  .nav span {
+    display: none;
+  }
+
+  #menu {
+    display: inline-block;
+  }
+}
+
+/* Screens Smaller than width: 470px */
+@media only screen and (max-width: 470px) {
+  .jumbotron {
+    height: 17rem;
+  }
+
+  .featured {
+    padding: 1rem 2rem;
+    top: 10rem;
+  }
+
+  .featured h3 {
+    font-size: 0.77rem;
+  }
+
+  .featured h1 {
+    font-size: 1rem;
+  }
+
+  #glasses {
+    display: none;
+  }
+
+  .products {
+    justify-content: center;
+  }
+
+  .product {
+    width: 90%
+  }
+
+  .contact {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .info {
+    width: 90%;
+  }
+
+  #hours {
+    margin-top: 0.5rem;
+  }
+
+  .footer {
+    justify-content: center;
+  }
 }
